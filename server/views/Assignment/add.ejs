@@ -1,0 +1,58 @@
+<%- include ../Partials/header.ejs%> <!-- Include the header partial to add the header section -->
+<%- include ../Partials/main_nav.ejs%> <!-- Include the main navigation partial to display the navigation bar -->
+
+<!-- Container for the content -->
+<div class="container">
+    <div class="row">
+        <!-- Column centered on the page -->
+        <div class="offset-md-3 col-md-6">
+            <!-- Display the title dynamically -->
+            <h1><%= title %></h1>
+
+            <!-- Form for adding an assignment -->
+            <form class="form" method="POST">
+                
+                <!-- Form group for Name input -->
+                <div class="form-group">
+                    <label for="Name">Name</label> <!-- Label for Name field -->
+                    <input type="text" class="form-control" id="Name" placeholder="Enter Name" name="Name" required> <!-- Input field for Name -->
+                </div>
+                
+                <!-- Form group for Subject input -->
+                <div class="form-group">
+                    <label for="Teacher">Name of Subject</label> <!-- Label for Subject field -->
+                    <input type="text" class="form-control" id="Subject" placeholder="Enter the Subject Name" name="Subject" required> <!-- Input field for Subject -->
+                </div>
+                
+                <!-- Form group for Topic input -->
+                <div class="form-group">
+                    <label for="Subject">Topic</label> <!-- Label for Topic field -->
+                    <input type="text" class="form-control" id="Topic" placeholder="Enter the Topic" name="Topic" required> <!-- Input field for Topic -->
+                </div>
+                
+                <!-- Form group for Description input (used for Class) -->
+                <div class="form-group">
+                    <label for="Description">Class</label> <!-- Label for Class field -->
+                    <textarea type="text" class="form-control" id="Class" placeholder="Enter the Class" name="Description" required></textarea> <!-- Textarea for Class -->
+                </div>
+                
+                <!-- Form group for Due Date input -->
+                <div class="form-group">
+                    <label for="timeTextField">Due Date</label> <!-- Label for Due Date field -->
+                    <input type="datetime-local" class="form-control" id="timeTextField" placeholder="Enter the time when it is due" name="Due"> <!-- Input for Due Date -->
+                </div>
+
+                <!-- Submit button to submit the form -->
+                <button class="btn btn-primary" type="submit">Submit
+                    <i class="fas fa-edit"></i></button> <!-- Submit button with icon -->
+
+                <!-- Cancel button to go back to the previous page -->
+                <button class="btn btn-warning" type="button" onclick="window.history.back()">Cancel
+                    <i class="fas fa-undo"></i></button> <!-- Cancel button with icon -->
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include ../Partials/footer.ejs%> <!-- Include the footer partial to display the footer section -->
