@@ -1,1 +1,0 @@
-module.exports={"URI":"mongodb+srv://dev:parmar@cluster0.nd1wf.mongodb.net/"}
