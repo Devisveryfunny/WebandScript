@@ -1,0 +1,11 @@
+<%- include Partials/header.ejs%> <!-- Include the header partial for the consistent header section across pages -->
+<%- include Partials/main_nav.ejs%> <!-- Include the main navigation partial for the navigation bar -->
+
+<div class="container"> <!-- Main content container -->
+    <h1><%= message %></h1>
+    <!-- Display the error status code (e.g., 404, 500) -->
+    <h2><%= error.status %></h2>
+    <pre><%= error.stack %></pre>
+</div> 
+
+<%- include Partials/footer.ejs%> <!-- Include the footer partial for the consistent footer section across pages -->
